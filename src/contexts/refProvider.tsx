@@ -1,4 +1,4 @@
-import { useElementOnScreen } from "@/hooks/useElementOnScreen";
+import { useElementOnScreen } from "@/hooks";
 import { ContextProviderProps } from "@/types/contextTypes";
 import { element } from "@/types/intersectionTypes";
 import { createContext, useContext } from "react";

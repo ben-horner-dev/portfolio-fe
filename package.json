@@ -8,7 +8,7 @@
         "start": "next start",
         "lint": "next lint",
         "prepare": "husky",
-        "test": "jest --passWithNoTests",
+        "test": "jest --passWithNoTests --coverage",
         "test:watch": "jest --watch",
         "cypress:open": "cypress open",
         "cypress:run": "cypress run --browser chrome --headless"

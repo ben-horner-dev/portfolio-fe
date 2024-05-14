@@ -24,7 +24,9 @@ export function Hero() {
     >
       <CenteredTextBox>
         <SlideDownAnimation>
-          <Typography variant="h2">{SUB_HEADER}</Typography>
+          <Typography variant="h2" data-testid="subheader">
+            {SUB_HEADER}
+          </Typography>
           <Text className={"full-screen-text"} text={FULL_SCREEN_SITE_TEXT} />
           <Text
             className={"mobile-screen-text"}
