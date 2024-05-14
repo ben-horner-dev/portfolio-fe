@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: "Jet Brains Mono";
+    src:
+        local("JetBrains Mono"),
+        url("/fonts/JetBrainsMonoNL-Regular.ttf") format("truetype");
+    font-weight: bold;
+}
+
 :root {
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 214, 219, 220;
@@ -30,4 +38,71 @@ body {
     .text-balance {
         text-wrap: balance;
     }
+}
+
+body {
+    margin: 0;
+    font-family:
+        "Jet Brains Mono",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Fira Sans",
+        "Droid Sans",
+        "Helvetica Neue",
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.animate__animated.animate__fadeInRight {
+    --animate-duration: 0.5s;
+}
+
+.animate__animated.animate__fadeOutLeft {
+    --animate-duration: 0.5s;
+}
+
+.container {
+    max-width: 100%;
+    height: 100%;
+}
+
+.section {
+    width: 100vw;
+    /* flex: none; */
+    position: relative;
+    display: flex;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.snap-section {
+    width: 100vw;
+    /* flex: none; */
+    position: relative;
+    display: flex;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
