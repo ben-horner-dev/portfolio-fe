@@ -1,0 +1,17 @@
+.full-screen-text {
+    display: block !important;
+}
+
+.mobile-screen-text {
+    display: none !important;
+}
+
+@media (max-width: 815px) {
+    .full-screen-text {
+        display: none !important;
+    }
+
+    .mobile-screen-text {
+        display: block !important;
+    }
+}
