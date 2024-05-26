@@ -1,17 +1,18 @@
 name: Run Tests
 on:
-  push:
-    branches:
-      - 'feature/**'
+    push:
+        branches:
+            - "feature/**"
+            - "bugfix/**"
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+    build:
+        runs-on: ubuntu-latest
 
-    steps:
-      - name: checkout all the submodules
-        uses: actions/checkout@v2
-        with:
-          submodules: recursive
-      - name: run tests
-        run: npm install && npx jest --passWithNoTests
+        steps:
+            - name: checkout all the submodules
+              uses: actions/checkout@v2
+              with:
+                  submodules: recursive
+            - name: run tests
+              run: npm install && npx jest --passWithNoTests
