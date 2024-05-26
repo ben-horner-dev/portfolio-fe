@@ -24,4 +24,4 @@ jobs:
             - name: Run build
               run: make run-local &
             - name: Run Cypress tests
-              run: sudo npm run cypress:run
+              run: npm run cypress:run
