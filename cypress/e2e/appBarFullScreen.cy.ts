@@ -10,7 +10,11 @@ context("Actions", () => {
         cy.get('[data-testid="logo"]')
             .should("be.visible")
             .and(($logo) => {
-                expect($logo.offset().left).to.be.closeTo(0, 50);
+                const offsetLeft = $logo.offset()?.left;
+
+                if (offsetLeft !== undefined) {
+                    expect(offsetLeft).to.be.closeTo(0, 50);
+                }
             });
         cy.get('[data-testid="burger-button"]').should("not.be.visible");
     });

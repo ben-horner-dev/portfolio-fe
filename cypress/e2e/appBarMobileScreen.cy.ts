@@ -10,11 +10,14 @@ context("Actions", () => {
         cy.get('[data-testid="logo"]')
             .should("be.visible")
             .and(($logo) => {
-                expect(
-                    Cypress.config().viewportWidth -
-                        $logo.offset().left -
-                        $logo.width()
-                ).to.be.closeTo(0, 900);
+                const offsetLeft = $logo.offset()?.left;
+                const logoWidth = $logo.width();
+
+                if (offsetLeft !== undefined && logoWidth !== undefined) {
+                    expect(
+                        Cypress.config().viewportWidth - offsetLeft - logoWidth
+                    ).to.be.closeTo(0, 900);
+                }
             });
         cy.get('[data-testid="burger-button"]').should("be.visible");
     });
