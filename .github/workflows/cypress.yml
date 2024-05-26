@@ -20,6 +20,6 @@ jobs:
             - name: Build FE
               run: make build-local
             - name: Run build
-              run: make run-local & wait-on http://localhost:80
+              run: make run-local &
             - name: Run Cypress tests
-              run: cypress run --browser chrome --headless
+              run: sudo cypress run --browser chrome --headless
