@@ -1,4 +1,4 @@
-import { Hero } from "@/components/organisms/Hero/Hero";
+import { Hero } from "@/components/templates/Hero/Hero";
 import "animate.css";
 import Head from "next/head";
 
