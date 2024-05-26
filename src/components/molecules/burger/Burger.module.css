@@ -1,0 +1,10 @@
+.burger {
+    display: none !important;
+    color: white;
+}
+
+@media (max-width: 815px) {
+    .burger {
+        display: block !important;
+    }
+}
