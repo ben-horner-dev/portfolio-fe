@@ -1,10 +1,8 @@
 FROM node:20.12
 
+COPY . /portfolio-fe-dev
 
-
-COPY . /portfolio-fe
-
-WORKDIR /portfolio-fe
+WORKDIR /portfolio-fe-dev
 
 RUN npm install
 
