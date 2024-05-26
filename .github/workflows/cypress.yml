@@ -15,6 +15,8 @@ jobs:
                   node-version: 20.12
             - name: Install dependencies
               run: sudo apt-get install -yq libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libnss3 libxss1 libasound2 libxtst6 xauth xvfb
+            - name: Install frontend dependencies
+              run: npm install
             - name: Install Cypress
               run: npm install cypress --save-dev
             - name: Build FE
@@ -22,4 +24,4 @@ jobs:
             - name: Run build
               run: make run-local &
             - name: Run Cypress tests
-              run: sudo cypress run --browser chrome --headless
+              run: sudo npm run cypress:run
