@@ -1,1 +1,1 @@
-export * from "UnFadedText";
+export * from "./UnFadedText";
