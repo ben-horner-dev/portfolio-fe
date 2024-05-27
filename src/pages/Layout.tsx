@@ -1,6 +1,6 @@
-import { CustomAppBar } from "@/components/templates/appBar";
-import { RefProvider } from "@/contexts/refProvider";
-import { DefaultTheme } from "@/themes";
+import { CustomAppBar } from "../components/templates/appBar";
+import { RefProvider } from "../contexts/refProvider";
+import { DefaultTheme } from "../themes";
 
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import type { Metadata } from "next";
