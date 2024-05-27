@@ -1,0 +1,28 @@
+.unfaded-text {
+    pointer-events: none;
+    font-family: JetBrains Mono;
+    font-size: 81px;
+    font-weight: 500;
+    margin-top: -24vh;
+    margin-left: 10vw;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+    position: relative;
+    z-index: 0;
+}
+
+@media (max-width: 1300px) {
+    .unfaded-text {
+        margin-top: -44vh;
+    }
+}
+
+@media (max-width: 620px) {
+    .unfaded-text {
+        font-size: 45px !important;
+    }
+}
