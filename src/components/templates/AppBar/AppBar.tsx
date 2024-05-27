@@ -3,7 +3,7 @@ import { AppBar } from "@mui/material";
 import { Box } from "@mui/system";
 import styles from "./AppBar.module.css";
 
-export function CustomAppBar() {
+export const CustomAppBar = () => {
   return (
     <Box>
       <AppBar position="fixed" className={styles.appbar}>
@@ -11,4 +11,4 @@ export function CustomAppBar() {
       </AppBar>
     </Box>
   );
-}
+};
