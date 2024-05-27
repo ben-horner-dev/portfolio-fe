@@ -78,25 +78,8 @@ html {
     --animate-duration: 0.5s;
 }
 
-.container {
-    max-width: 100%;
-    height: 100%;
-}
-
-.section {
-    width: 100vw;
-    /* flex: none; */
-    position: relative;
-    display: flex;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .snap-section {
     width: 100vw;
-    /* flex: none; */
     position: relative;
     display: flex;
     height: 100vh;

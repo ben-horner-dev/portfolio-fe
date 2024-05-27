@@ -1,8 +1,10 @@
 import { alertReducer } from "@/slices/alertSlice";
+import { sectionReducer } from "@/slices/sectionSlice";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 
 const rootReducer = combineReducers({
   alert: alertReducer,
+  section: sectionReducer,
 });
 
 export const setupStore = (preloadedState?: Partial<RootState>) => {

@@ -27,6 +27,14 @@ jobs:
               run: doctl auth init --access-token ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
             - name: Login to DigitalOcean Container Registry
               run: doctl registry login
+            - name: Set env vars
+              run: |
+                  touch .env
+                  echo "AUTH_FACEBOOK_ID=${{ secrets.AUTH_FACEBOOK_ID }}" >> .env
+                  echo "AUTH_FACEBOOK_SECRET=${{ secrets.AUTH_FACEBOOK_SECRET }}" >> .env
+                  echo "AUTH_GOOGLE_ID=${{ secrets.AUTH_GOOGLE_ID }}" >> .env
+                  echo "AUTH_GOOGLE_SECRET=${{ secrets.AUTH_GOOGLE_SECRET }}" >> .env
+                  echo "AUTH_SECRET=${{ secrets.AUTH_SECRET }}" >> .env
             - name: Build the Docker image
               run: docker compose -f tools/docker/docker-compose.ci-build.yml build
             - name: Tag and push Docker image

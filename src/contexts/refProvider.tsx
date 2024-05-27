@@ -6,6 +6,7 @@ import { createContext, useContext } from "react";
 interface RefsType {
   hero: element;
   contact: element;
+  oauth: element;
 }
 
 const MyRefContext = createContext<RefsType | undefined>(undefined);
@@ -14,6 +15,7 @@ export function RefProvider({ children }: ContextProviderProps) {
   const refs = {
     hero: useElementOnScreen(),
     contact: useElementOnScreen(),
+    oauth: useElementOnScreen(),
   };
 
   return <MyRefContext.Provider value={refs}>{children}</MyRefContext.Provider>;

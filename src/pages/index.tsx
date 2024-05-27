@@ -1,4 +1,6 @@
-import { Hero } from "@/components/templates/Hero/Hero";
+import { SectionContainer } from "@/components/organisms/sectionContainer";
+import { Hero } from "@/components/templates/hero/Hero";
+import { SnapSectionContainer } from "@/components/templates/snapSectionContainer";
 import "animate.css";
 import Head from "next/head";
 
@@ -9,6 +11,9 @@ export default function Index() {
         <title>Ben Horner&apos;s Portfolio</title>
       </Head>
       <Hero />
+      <SnapSectionContainer>
+        <SectionContainer />
+      </SnapSectionContainer>
     </>
   );
 }

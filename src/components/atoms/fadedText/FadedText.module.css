@@ -1,0 +1,17 @@
+.faded-text {
+    font-family: JetBrains Mono;
+    white-space: nowrap;
+    height: "25%";
+    font-size: 25vh;
+    font-weight: 800;
+    /* opacity: 0.05 !important; */
+    color: rgba(0, 0, 0, 0.05);
+    margin-left: -1.9%;
+    overflow-x: hidden;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+}

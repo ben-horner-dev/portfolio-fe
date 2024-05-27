@@ -1,0 +1,21 @@
+.content-container {
+    background-color: transparent;
+    position: absolute;
+    max-height: 50vh;
+    margin-left: 40vw;
+    margin-bottom: 12.5vh;
+    color: #ea4336;
+}
+
+@media (max-width: 1300px) {
+    .content-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 620px) {
+    .content-container {
+        margin-left: -15vw;
+    }
+}

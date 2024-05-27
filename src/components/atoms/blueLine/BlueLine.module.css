@@ -1,0 +1,7 @@
+.blue-line {
+    width: 9%;
+    border-bottom: 10px solid #087ad9;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
