@@ -9,7 +9,7 @@ interface OAuthAvatarProps {
 
 export const OAuthAvatar = ({ icon }: OAuthAvatarProps) => {
   return (
-    <ListItemAvatar>
+    <ListItemAvatar data-testid="oauth-avatar">
       <Avatar className={styles["oauth-box-avatar"]}>
         <Image src={`${icon}.svg`} alt={icon} width={50} height={50} />
       </Avatar>

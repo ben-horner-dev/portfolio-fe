@@ -16,6 +16,7 @@ export const FadedText = ({
       className={`${textClass} ${styles["faded-text"]}`}
       draggable="false"
       onAnimationEnd={handleAnimationEnd}
+      data-testid="faded-text"
     >
       {text}
     </div>

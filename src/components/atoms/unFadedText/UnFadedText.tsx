@@ -12,7 +12,11 @@ export const UnFadedText = ({
   children,
 }: UnFadedTextProps) => {
   return (
-    <div className={`${textClass} ${styles["unfaded-text"]}`} draggable="false">
+    <div
+      className={`${textClass} ${styles["unfaded-text"]}`}
+      draggable="false"
+      data-testid="un-faded-text"
+    >
       {text}
       {text && children}
     </div>
