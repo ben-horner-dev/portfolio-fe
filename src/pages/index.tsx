@@ -1,5 +1,5 @@
 import { SectionContainer } from "@/components/organisms/sectionContainer";
-import { Hero } from "@/components/templates/hero/Hero";
+import { Hero } from "@/components/templates/hero";
 import { SnapSectionContainer } from "@/components/templates/snapSectionContainer";
 import "animate.css";
 import Head from "next/head";
