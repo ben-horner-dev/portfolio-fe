@@ -1,0 +1,19 @@
+#oauth-box-list {
+    width: 30vw;
+    background-color: transparent;
+    height: 30vh;
+}
+
+.oauth-box-avatar {
+    background-color: transparent !important;
+    cursor: pointer;
+}
+
+.oauth-box-avatar img {
+    width: 100%;
+}
+
+.oauth-divider {
+    margin-top: 3% !important;
+    margin-bottom: 3% !important;
+}
