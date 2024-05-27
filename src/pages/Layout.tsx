@@ -1,5 +1,7 @@
-import { CustomAppBar } from "@/components/templates/AppBar";
+import { CustomAppBar } from "@/components/templates/appBar";
+import { RefProvider } from "@/contexts/refProvider";
 import { DefaultTheme } from "@/themes";
+
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import type { Metadata } from "next";
 
@@ -16,8 +18,10 @@ export default function Layout({
   return (
     <>
       <CssBaseline />
-      <CustomAppBar />
-      <ThemeProvider theme={DefaultTheme}>{children}</ThemeProvider>
+      <RefProvider>
+        <CustomAppBar />
+        <ThemeProvider theme={DefaultTheme}>{children}</ThemeProvider>
+      </RefProvider>
     </>
   );
 }

@@ -30,7 +30,7 @@ export const DefaultTheme = createTheme({
   palette: {
     portfolio: {
       main: "#FFF",
-      contrastText: "#D71009",
+      contrastText: "#EA4336",
     },
     primary: {
       main: "#FFF",
