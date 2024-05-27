@@ -1,0 +1,20 @@
+.menu-btns {
+    margin-left: auto !important;
+    display: inline-flex !important;
+}
+
+.menu-btn {
+    border: 0px solid #000 !important;
+    text-transform: none !important;
+    background-color: transparent !important;
+}
+
+.mail-icon {
+    color: black !important;
+}
+
+@media (max-width: 480px) {
+    .menu-btn {
+        display: none !important;
+    }
+}

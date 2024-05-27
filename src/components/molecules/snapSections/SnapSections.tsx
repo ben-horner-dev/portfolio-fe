@@ -2,6 +2,7 @@ import { useRefs } from "@/contexts/refProvider";
 import { useAppDispatch } from "@/hooks";
 import { setSectionLength } from "@/slices/sectionSlice";
 import { Section } from "@/types/intersectionTypes";
+import { useEffect } from "react";
 import styles from "./SnapSections.module.css";
 
 export const SnapSections = () => {
@@ -14,7 +15,10 @@ export const SnapSections = () => {
       ref: oAuthRef,
     },
   ];
-  dispatch(setSectionLength({ length: sections.length }));
+  useEffect(() => {
+    dispatch(setSectionLength({ length: sections.length }));
+  }, [dispatch, sections.length]);
+
   return (
     <>
       {sections.map((section: Section, index: number) => {

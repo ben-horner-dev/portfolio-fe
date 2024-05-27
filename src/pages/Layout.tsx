@@ -19,8 +19,10 @@ export default function Layout({
     <>
       <CssBaseline />
       <RefProvider>
-        <CustomAppBar />
-        <ThemeProvider theme={DefaultTheme}>{children}</ThemeProvider>
+        <ThemeProvider theme={DefaultTheme}>
+          <CustomAppBar />
+          {children}
+        </ThemeProvider>
       </RefProvider>
     </>
   );
