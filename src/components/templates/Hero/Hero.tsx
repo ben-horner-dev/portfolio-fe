@@ -12,7 +12,7 @@ import { Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import style from "./Hero.module.css";
 
-export function Hero() {
+export const Hero = () => {
   const refs = useRefs();
   const heroRef = refs?.hero.ref;
 
@@ -37,4 +37,4 @@ export function Hero() {
       </CenteredTextBox>
     </Box>
   );
-}
+};

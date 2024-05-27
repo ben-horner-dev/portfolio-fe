@@ -8,6 +8,7 @@ jobs:
     test:
         timeout-minutes: 60
         runs-on: ubuntu-latest
+        environment: prod
         steps:
             - uses: actions/checkout@v4
             - uses: actions/setup-node@v4
@@ -17,23 +18,19 @@ jobs:
               run: sudo apt-get install -yq libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libnss3 libxss1 libasound2 libxtst6 xauth xvfb
             - name: Install frontend dependencies
               run: npm install
-            - name: check hero
-              run: ls src/components/templates
-            # - name: see if build runs
-            #   run: npm run build
-            # - name: Set env vars
-            #   run: |
-            #       touch .env
-            #       echo "AUTH_FACEBOOK_ID=${{ secrets.AUTH_FACEBOOK_ID }}" >> .env
-            #       echo "AUTH_FACEBOOK_SECRET=${{ secrets.AUTH_FACEBOOK_SECRET }}" >> .env
-            #       echo "AUTH_GOOGLE_ID=${{ secrets.AUTH_GOOGLE_ID }}" >> .env
-            #       echo "AUTH_GOOGLE_SECRET=${{ secrets.AUTH_GOOGLE_SECRET }}" >> .env
-            #       echo "AUTH_SECRET=${{ secrets.AUTH_SECRET }}" >> .env
-            # - name: Install Cypress
-            #   run: npm install cypress --save-dev
-            # - name: Build FE
-            #   run: make build-local
-            # - name: Run build
-            #   run: make run-local &
-            # - name: Run Cypress tests
-            #   run: npm run cypress:run
+            - name: Set env vars
+              run: |
+                  touch .env
+                  echo "AUTH_FACEBOOK_ID=${{ secrets.AUTH_FACEBOOK_ID }}" >> .env
+                  echo "AUTH_FACEBOOK_SECRET=${{ secrets.AUTH_FACEBOOK_SECRET }}" >> .env
+                  echo "AUTH_GOOGLE_ID=${{ secrets.AUTH_GOOGLE_ID }}" >> .env
+                  echo "AUTH_GOOGLE_SECRET=${{ secrets.AUTH_GOOGLE_SECRET }}" >> .env
+                  echo "AUTH_SECRET=${{ secrets.AUTH_SECRET }}" >> .env
+            - name: Install Cypress
+              run: npm install cypress --save-dev
+            - name: Build FE
+              run: make build-local
+            - name: Run build
+              run: make run-local &
+            - name: Run Cypress tests
+              run: npm run cypress:run
