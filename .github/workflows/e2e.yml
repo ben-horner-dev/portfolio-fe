@@ -18,7 +18,7 @@ jobs:
             - name: Install frontend dependencies
               run: npm install
             - name: check hero
-              run: ls src/components/templates/hero/ && ls src/components/templates/appBar
+              run: ls src/components/templates
             # - name: see if build runs
             #   run: npm run build
             # - name: Set env vars
