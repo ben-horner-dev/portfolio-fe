@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
-import { Hero } from "./Hero";
+import { Landing } from "./Landing";
 
 describe("Hero", () => {
   it("renders the hero section with correct texts and classes", () => {
-    render(<Hero />);
+    render(<Landing />);
 
     const container = screen.getByTestId("container");
     expect(container).toBeInTheDocument();

@@ -10,9 +10,9 @@ import {
 } from "@/enums/heroEnums";
 import { Typography } from "@mui/material";
 import Box from "@mui/material/Box";
-import style from "./Hero.module.css";
+import style from "./Landing.module.css";
 
-export const Hero = () => {
+export const Landing = () => {
   const refs = useRefs();
   const heroRef = refs?.hero.ref;
 
