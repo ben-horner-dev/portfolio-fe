@@ -1,4 +1,4 @@
-import { CustomAppBar } from "@/components/templates/appBar";
+import { NavBar } from "@/components/templates/navBar";
 import { RefProvider } from "@/contexts/refProvider";
 import { DefaultTheme } from "@/themes";
 
@@ -20,7 +20,7 @@ export default function Layout({
       <CssBaseline />
       <RefProvider>
         <ThemeProvider theme={DefaultTheme}>
-          <CustomAppBar />
+          <NavBar />
           {children}
         </ThemeProvider>
       </RefProvider>
