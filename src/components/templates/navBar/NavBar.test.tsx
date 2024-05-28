@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { CustomAppBar } from "./AppBar";
+import { NavBar } from "./NavBar";
 
 jest.mock("next-auth/react", () => ({
   useSession: () => ({
@@ -7,9 +7,9 @@ jest.mock("next-auth/react", () => ({
   }),
 }));
 
-describe("CustomAppBar", () => {
-  it("renders the custom app bar with a custom toolbar", () => {
-    render(<CustomAppBar />);
+describe("NavBar", () => {
+  it("renders the custom nav bar with a custom toolbar", () => {
+    render(<NavBar />);
     const appBar = screen.getByRole("banner");
     expect(appBar).toBeInTheDocument();
     expect(appBar).toHaveClass("appbar");
