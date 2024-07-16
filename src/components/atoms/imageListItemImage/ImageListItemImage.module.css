@@ -1,0 +1,15 @@
+.product-img {
+    width: 30vmin !important;
+    height: 50vh;
+    object-fit: cover;
+    object-position: 100% 50%;
+    transition: object-position 1200ms;
+    animation-fill-mode: forwards;
+}
+
+@media (max-width: 480px) {
+    .socials-img,
+    .product-img {
+        width: 55vmin !important;
+    }
+}
