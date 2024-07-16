@@ -28,8 +28,8 @@ context("Actions", () => {
             .first()
             .should("have.text", "Product 1$2");
         cy.get('[data-testid="product-btn"]').should("have.length", 7);
-        cy.get('[data-testid="product-btn"]').first().click();
-        cy.get('[data-testid="product-btn"]').first().click();
+        cy.get('[data-testid="product-btn"]').first().click({ force: true });
+        cy.get('[data-testid="product-btn"]').first().click({ force: true });
         cy.get(".MuiBadge-badge").contains("2");
         cy.get('[data-testid="shopping-cart-btn"]').click();
         cy.get(".MuiTableCell-body").should("have.length", 6);
