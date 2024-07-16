@@ -6,12 +6,12 @@ import { signOut, useSession } from "next-auth/react";
 
 export const UserAvatar = () => {
   const refs = useRefs();
-  const isHeroVisible = refs?.hero.isVisible;
+  const isOAuthVisible = refs?.oauth.isVisible;
   const { data: session } = useSession();
   return (
     <>
       {session && session.user && (
-        <Fade in={!isHeroVisible}>
+        <Fade in={isOAuthVisible}>
           <IconButton onClick={() => signOut()}>
             <Avatar {...stringToAvatar(session.user?.name as string)} />
           </IconButton>

@@ -20,6 +20,9 @@ describe("UserAvatar", () => {
       hero: {
         isVisible: false,
       },
+      oauth: {
+        isVisible: true,
+      },
     });
 
     render(<UserAvatar />);
