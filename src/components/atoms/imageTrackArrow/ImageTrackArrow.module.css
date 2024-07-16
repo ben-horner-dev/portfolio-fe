@@ -1,0 +1,29 @@
+.blink-me {
+    align-items: center;
+    display: flex;
+    animation: blinker 1s linear infinite;
+}
+
+.keyboard-left-icon,
+.keyboard-right-icon {
+    position: absolute !important;
+    font-size: 200px !important;
+    color: black !important;
+    cursor: pointer;
+}
+
+.keyboard-left-icon {
+    margin-right: -40px;
+    position: relative !important;
+}
+
+.keyboard-right-icon {
+    position: relative !important;
+    margin-left: -40px;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
