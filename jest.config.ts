@@ -22,7 +22,7 @@ const config: Config = {
         "<rootDir>/components/molecules/eCommerce/ECommerce.tsx", // No logic to test
         "<rootDir>/components/molecules/modal/Modal.tsx", // No logic to test
         "<rootDir>/components/molecules/logoBtn/LogoBtn.tsx", // No logic to test
-        "<rootDir>/components/organisms/Payment/Payment.tsx", // Temp skip before full feature implementation
+        "<rootDir>/components/organisms/Payment/Payment.tsx", // TODO: Temp skip before full feature implementation
         "<rootDir>/contexts/refProvider.tsx", // No logic to test
     ],
     moduleNameMapper: {
