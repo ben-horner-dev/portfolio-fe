@@ -2,6 +2,7 @@
     scroll-snap-align: start;
     height: 100vh;
     width: 100%;
+    background-color: white;
 }
 
 .inner-snap-section-top {
