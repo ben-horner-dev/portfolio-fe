@@ -1,0 +1,10 @@
+.image-track {
+    margin-top: 31.25vh;
+    height: 50vh;
+    display: flex;
+    left: 50%;
+    top: 50%;
+    overflow-x: hidden;
+    transition: transform 1000ms;
+    animation-fill-mode: forwards;
+}
