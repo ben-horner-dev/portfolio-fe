@@ -1,10 +1,14 @@
 import { alertReducer } from "@/slices/alertSlice";
+import { navBarIconsReducer } from "@/slices/navBarIconsSlice";
 import { sectionReducer } from "@/slices/sectionSlice";
+import { shoppingCartReducer } from "@/slices/shoppingCartSlice";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 
 const rootReducer = combineReducers({
   alert: alertReducer,
   section: sectionReducer,
+  shoppingCart: shoppingCartReducer,
+  navBarIcons: navBarIconsReducer,
 });
 
 export const setupStore = (preloadedState?: Partial<RootState>) => {

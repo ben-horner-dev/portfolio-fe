@@ -1,5 +1,6 @@
+import { FlashMessage } from "@/components/atoms/flashMessage";
 import { SectionContainer } from "@/components/organisms/sectionContainer";
-import { Landing } from "@/components/templates/landing";
+import { Hero } from "@/components/templates/hero";
 import { SnapSectionContainer } from "@/components/templates/snapSectionContainer";
 import "animate.css";
 import Head from "next/head";
@@ -10,10 +11,11 @@ export default function Index() {
       <Head>
         <title>Ben Horner&apos;s Portfolio</title>
       </Head>
-      <Landing />
+      <Hero />
       <SnapSectionContainer>
         <SectionContainer />
       </SnapSectionContainer>
+      <FlashMessage />
     </>
   );
 }
