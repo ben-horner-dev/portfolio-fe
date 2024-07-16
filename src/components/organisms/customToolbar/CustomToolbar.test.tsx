@@ -1,4 +1,5 @@
-import { render, screen } from "@testing-library/react";
+import { renderWithProviders } from "@/utils/testUtils";
+import { screen } from "@testing-library/react";
 import { CustomToolbar } from "./CustomToolbar";
 // Mock the scrollIntoView method
 jest.mock("next-auth/react", () => ({
@@ -9,7 +10,7 @@ jest.mock("next-auth/react", () => ({
 
 describe("CustomToolbar", () => {
   it("renders the custom toolbar with burger and logo button", () => {
-    render(<CustomToolbar />);
+    renderWithProviders(<CustomToolbar />);
     const burgerButton = screen.getByTestId("burger-button");
     const logoButton = screen.getAllByAltText("Ben Horner")[0];
     expect(burgerButton).toBeInTheDocument();

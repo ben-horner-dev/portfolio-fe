@@ -1,0 +1,33 @@
+.product-name-txt {
+    display: block !important;
+}
+
+.shopping-cart-box {
+    width: 70vw;
+    padding: 6vw;
+    margin-top: 5vh;
+    overflow-x: hidden;
+}
+
+
+
+@media (max-width: 1060px) {
+    .product-name-txt {
+        display: none !important;
+    }
+
+    .payment-icon {
+        display: none !important;
+    }
+
+    .shopping-cart-table {
+        width: 100vw !important;
+        overflow-x: auto !important;
+    }
+
+    .shopping-cart-header {
+        width: 100% !important;
+    }
+
+
+}

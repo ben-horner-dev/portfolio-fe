@@ -8,11 +8,11 @@ import Layout from "./Layout";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <SessionProvider session={pageProps.session}>
-      <Layout>
-        <StoreProvider>
+      <StoreProvider>
+        <Layout>
           <Component {...pageProps} />
-        </StoreProvider>
-      </Layout>
+        </Layout>
+      </StoreProvider>
     </SessionProvider>
   );
 }

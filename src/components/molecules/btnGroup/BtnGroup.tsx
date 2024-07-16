@@ -7,7 +7,7 @@ export function BtnGroup({ children }: { children: ReactNode }) {
   const refs = useRefs();
   const isHeroVisible = refs?.hero.isVisible;
   const btnColor = isHeroVisible ? "primary" : "secondary";
-  const btnItems = ["OAuth"];
+  const btnItems = ["OAuth", "ECommerce"];
 
   const handleClick = (key: string) => {
     if (!refs) return;

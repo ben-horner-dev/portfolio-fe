@@ -25,7 +25,7 @@ export const OAuthAvatar = ({ icon }: OAuthAvatarProps) => {
       onClick={() => handleClick(icon)}
     >
       <Avatar className={styles["oauth-box-avatar"]}>
-        <Image src={`${icon}.svg`} alt={icon} width={50} height={50} />
+        <Image src={`oAuth/${icon}.svg`} alt={icon} width={50} height={50} />
       </Avatar>
     </ListItemAvatar>
   );
