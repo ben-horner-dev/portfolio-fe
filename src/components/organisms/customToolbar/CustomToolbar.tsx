@@ -1,4 +1,4 @@
-import { ShoppingCart } from "@/components/atoms/shoppingCart/ShoppingCart";
+import { ShoppingCart } from "@/components/atoms/shoppingCart";
 import { UserAvatar } from "@/components/atoms/userAvatar";
 import { BtnGroup } from "@/components/molecules/btnGroup";
 import { Burger } from "@/components/molecules/burger";
