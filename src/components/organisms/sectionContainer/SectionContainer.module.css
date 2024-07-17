@@ -1,6 +1,6 @@
 .section {
     width: 100vw;
-    /* flex: none; */
+    overflow-x: hidden;
     position: relative;
     display: flex;
     height: 100vh;
