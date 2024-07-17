@@ -10,17 +10,17 @@ import {
 } from "@/enums/heroEnums";
 import { Typography } from "@mui/material";
 import Box from "@mui/material/Box";
-import style from "./Landing.module.css";
+import style from "./Hero.module.css";
 
-export const Landing = () => {
+export const Hero = () => {
   const refs = useRefs();
   const heroRef = refs?.hero.ref;
 
   return (
     <Box
-      ref={heroRef}
       data-testid="container"
       className={`${style.container} snap-section`}
+      ref={heroRef}
     >
       <CenteredTextBox>
         <SlideDownAnimation>

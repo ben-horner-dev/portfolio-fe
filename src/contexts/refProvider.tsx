@@ -7,6 +7,7 @@ interface RefsType {
   hero: element;
   contact: element;
   oauth: element;
+  ecommerce: element;
 }
 
 const MyRefContext = createContext<RefsType | undefined>(undefined);
@@ -16,6 +17,7 @@ export function RefProvider({ children }: ContextProviderProps) {
     hero: useElementOnScreen(),
     contact: useElementOnScreen(),
     oauth: useElementOnScreen(),
+    ecommerce: useElementOnScreen(),
   };
 
   return <MyRefContext.Provider value={refs}>{children}</MyRefContext.Provider>;

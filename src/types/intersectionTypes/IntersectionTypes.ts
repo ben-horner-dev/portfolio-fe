@@ -6,4 +6,5 @@ export interface element {
 export interface Section {
   name: string;
   ref: React.RefObject<HTMLDivElement>;
+  className: string;
 }
