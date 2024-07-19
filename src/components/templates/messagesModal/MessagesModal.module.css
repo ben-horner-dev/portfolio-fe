@@ -1,0 +1,100 @@
+.message-content {
+    overflow-y: hidden !important;
+    width: 70vw !important;
+    padding: 6vw !important;
+    overflow-x: hidden !important;
+    min-height: 70vh !important;
+    max-height: 70vh !important;
+}
+
+.messages-list {
+    max-height: 50vh !important;
+    overflow-y: auto !important;
+    position: fixed !important;
+    width: 25% !important;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: 1px; /* Firefox */
+}
+
+.message-list-inner {
+    margin-top: -3vh !important;
+    width: 100% !important;
+}
+
+.conversation-box {
+    width: 100% !important;
+}
+
+.conversation-box-inner {
+    max-height: 50vh !important;
+    min-height: 50vh !important;
+    height: 100% !important;
+    width: 100% !important;
+    border: 1px solid grey !important;
+    border-radius: 8px !important;
+}
+
+.conversation-grid-inner::-webkit-scrollbar,
+.messages-list::-webkit-scrollbar {
+    display: none;
+}
+
+.conversation-grid-inner {
+    overflow-x: hidden !important;
+    height: 100% !important;
+    overflow-y: auto !important;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: 1px; /* Firefox */
+}
+
+.individual-message {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.individual-message-text {
+    margin: 0.5rem !important;
+    border-radius: 8px !important;
+    padding: 0.5em !important;
+}
+
+.reply-box {
+    margin-right: 1rem !important;
+}
+
+.reply-text-field {
+    width: 39vw !important;
+    margin-left: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+    margin-right: 0.5rem !important;
+    border-radius: 8px !important;
+}
+
+.chatbot-convo {
+    position: absolute !important;
+    bottom: 0 !important;
+}
+
+.inner-conversation-window {
+    max-height: 32vh;
+    overflow-y: auto !important;
+    margin-right: 1rem !important;
+}
+
+.btn {
+    color: black !important;
+}
+
+@media (max-width: 910px) {
+    .activity-txt {
+        display: none !important;
+    }
+
+    .reply-btn {
+        display: none !important;
+    }
+
+    .chatbot-convo {
+        width: 68% !important;
+    }
+}
