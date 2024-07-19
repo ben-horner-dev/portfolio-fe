@@ -1,0 +1,8 @@
+.messages-title {
+    background-color: transparent !important;
+    position: fixed !important;
+    z-index: 10 !important;
+    background-color: white !important;
+    padding-left: 4vw !important;
+    padding-top: 2vh !important;
+}
