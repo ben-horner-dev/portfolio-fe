@@ -1,0 +1,8 @@
+.user-result-image-list {
+    width: 100% !important;
+    transform: translateZ(0) !important;
+}
+
+.image-list-image {
+    width: 50% !important;
+}
