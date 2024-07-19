@@ -26,9 +26,11 @@ export function SectionContainer() {
   const isHeroVisible = useRefs()?.hero.isVisible;
   const isSocialNetworkVisible = useRefs()?.network.isVisible;
   const eCommerceRef = useRefs()?.ecommerce.ref;
+  const isContactVisible = useRefs()?.contact.isVisible;
   const socialNetworkRef = useRefs()?.network.ref;
   const heroRef = useRefs()?.hero.ref;
   const oAuthRef = useRefs()?.oauth.ref;
+  const contactRef = useRefs()?.contact.ref;
 
   const [text, setText] = useState("");
 
@@ -62,10 +64,12 @@ export function SectionContainer() {
         : setTextClass("animate__animated animate__fadeOutLeft ");
     };
     if (isSocialNetworkVisible) {
-      console.log("social network visible");
       if (prevRef === eCommerceRef?.current) {
         setTextClass("animate__animated animate__fadeOutLeft ");
-      } else if (prevRef === oAuthRef?.current) {
+      } else if (
+        prevRef === oAuthRef?.current ||
+        prevRef === contactRef?.current
+      ) {
         fadeOut();
       } else {
         setTextClass("animate__animated animate__fadeOutLeft ");
@@ -73,7 +77,6 @@ export function SectionContainer() {
       setPrevRef(socialNetworkRef?.current);
       dispatch(setNavBarIcons({ icon: NavBarIconsEnums.SOCIAL }));
     } else if (isECommerceVisible) {
-      console.log("e-commerce visible");
       if (prevRef === socialNetworkRef?.current) {
         setTextClass("animate__animated animate__fadeOutLeft ");
       } else if (prevRef === oAuthRef?.current) {
@@ -88,6 +91,12 @@ export function SectionContainer() {
       dispatch(setNavBarIcons({ icon: NavBarIconsEnums.USER }));
     } else if (isHeroVisible) {
       setPrevRef(heroRef?.current);
+      fadeIn();
+      setText("");
+      setContent(<></>);
+      dispatch(closeAlert());
+    } else if (isContactVisible) {
+      setPrevRef(contactRef?.current);
       fadeIn();
       setText("");
       setContent(<></>);
@@ -134,7 +143,6 @@ export function SectionContainer() {
         );
       }
     } else if (isSocialNetworkVisible) {
-      console.log("social network visible");
       fadeIn();
       if (text !== "NETWORK") {
         setText("NETWORK");
