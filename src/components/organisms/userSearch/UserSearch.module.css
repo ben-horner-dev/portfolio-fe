@@ -1,0 +1,10 @@
+.user-result-box {
+    width: 70vw;
+    padding: 4rem;
+    overflow-x: hidden;
+}
+
+.search-bar {
+    width: 100%;
+    margin-top: 2rem;
+}
