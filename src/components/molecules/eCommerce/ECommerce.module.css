@@ -3,36 +3,6 @@
     overflow-x: hidden !important;
 }
 
-.socials-img {
-    width: 30vmin !important;
-    height: 50vh;
-    object-fit: cover;
-    object-position: 100% 50%;
-    animation-fill-mode: forwards;
-    opacity: 1;
-    transition:
-        opacity 0.5s ease-in,
-        object-position 1200ms;
-}
-
 .image-list-item {
     width: 30vmin !important;
-    transition: opacity 0.2s ease-in;
-    opacity: 0.5;
-}
-
-.socials-img-item {
-    opacity: 1;
-    transition: opacity 1.5s ease-in;
-}
-
-.socials-img:hover {
-    opacity: 0.25;
-    cursor: grab;
-}
-
-.image-list-item:hover {
-    transition: opacity 0.2s ease-in;
-    opacity: 1;
-    cursor: grab;
 }

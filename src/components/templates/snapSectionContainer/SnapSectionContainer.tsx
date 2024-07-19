@@ -11,10 +11,16 @@ export function SnapSectionContainer({ children }: SnapSectionProps) {
 
   const oAuthRef = refs?.oauth.ref as React.RefObject<HTMLDivElement>;
   const eCommerceRef = refs?.ecommerce.ref as React.RefObject<HTMLDivElement>;
+  const socialNetworkRef = refs?.network.ref as React.RefObject<HTMLDivElement>;
   const sections = [
     {
       name: "eCommerce",
       ref: eCommerceRef,
+      className: "inner-snap-section",
+    },
+    {
+      name: "socialNetwork",
+      ref: socialNetworkRef,
       className: "inner-snap-section",
     },
   ];

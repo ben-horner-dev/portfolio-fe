@@ -1,23 +1,36 @@
 import { ImageListItemImage } from "@/components/atoms/imageListItemImage";
-import { ImageListItemImageInfo } from "@/components/atoms/imageListItemImageInfo";
 import { ImageTrack } from "@/components/molecules/imageTrack";
 import { Checkout } from "@/components/organisms/checkout";
-import { Payment } from "@/components/organisms/Payment";
-import { ECommerceAndSocialData } from "@/enums/eCommerceEnums";
+import { MessagesModal } from "@/components/templates/messagesModal";
+import { PaymentModal } from "@/components/templates/paymentModal";
+import { UsersModal } from "@/components/templates/usersModal";
+import { HoverClass, Prefix } from "@/enums/eCommerceEnums";
+import { useAppSelector } from "@/hooks";
 import { ImageList, ImageListItem } from "@mui/material";
 import { Elements } from "@stripe/react-stripe-js";
 import { useRef, useState } from "react";
 import styles from "./ECommerce.module.css";
 
-export function ECommerce() {
+interface InfoElementProps {
+  keyVal: number;
+  checked: boolean;
+  handleProductHover: (key: number, bool: boolean) => () => void;
+}
+interface ECommerceProps {
+  InfoElement: React.FC<InfoElementProps>;
+  prefix: Prefix;
+}
+
+export function ECommerce({ InfoElement, prefix }: ECommerceProps) {
   const [stripePromise, setStripePromise] = useState(null);
   const [clientSecret, setClientSecret] = useState("");
 
   const imageRef = useRef<{ [key: string]: HTMLImageElement | null }>({});
+  const userData = useAppSelector((state) => state.socialNetwork.userData);
   const setInitialData = () => {
     return Object.assign(
       {},
-      ECommerceAndSocialData.map((_, __) => false),
+      userData.map((_, __) => false),
     );
   };
   const [checked, setChecked] = useState(setInitialData());
@@ -36,7 +49,15 @@ export function ECommerce() {
           gap={10}
           variant="quilted"
         >
-          {ECommerceAndSocialData.map((_, key: number) => {
+          {userData.map((item, key: number) => {
+            if (prefix === Prefix.SOCIALS && !item.followed) {
+              return null;
+            }
+            const hoverClass =
+              checked[key] || prefix === Prefix.SOCIALS
+                ? HoverClass.HOVER
+                : HoverClass.NO_HOVER;
+
             return (
               <ImageListItem
                 data-testid="product-image"
@@ -44,13 +65,13 @@ export function ECommerce() {
                 className={styles["image-list-item"]}
               >
                 <ImageListItemImage
+                  hover={hoverClass}
                   keyVal={key}
                   imageRef={imageRef}
                   handleProductHover={handleProductHover}
-                  prefix="product"
+                  prefix={prefix}
                 />
-                <ImageListItemImageInfo
-                  prefix="product"
+                <InfoElement
                   keyVal={key}
                   checked={checked[key]}
                   handleProductHover={handleProductHover}
@@ -63,9 +84,11 @@ export function ECommerce() {
       <Checkout />
       {/* {clientSecret && stripePromise && ( */}
       <Elements stripe={stripePromise} options={{ clientSecret }}>
-        <Payment />
+        <PaymentModal />
       </Elements>
       {/* )} */}
+      <UsersModal />
+      <MessagesModal />
     </>
   );
 }

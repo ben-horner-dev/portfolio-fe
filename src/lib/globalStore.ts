@@ -2,6 +2,7 @@ import { alertReducer } from "@/slices/alertSlice";
 import { navBarIconsReducer } from "@/slices/navBarIconsSlice";
 import { sectionReducer } from "@/slices/sectionSlice";
 import { shoppingCartReducer } from "@/slices/shoppingCartSlice";
+import { socialNetworkSlice } from "@/slices/socialNetworkSlice";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 
 const rootReducer = combineReducers({
@@ -9,6 +10,7 @@ const rootReducer = combineReducers({
   section: sectionReducer,
   shoppingCart: shoppingCartReducer,
   navBarIcons: navBarIconsReducer,
+  socialNetwork: socialNetworkSlice.reducer,
 });
 
 export const setupStore = (preloadedState?: Partial<RootState>) => {

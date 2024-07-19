@@ -9,9 +9,9 @@ import {
   useStripe,
 } from "@stripe/react-stripe-js";
 import { useEffect, useState } from "react";
-import styles from "./Payment.module.css";
+import styles from "./PaymentModal.module.css";
 
-export function Payment() {
+export function PaymentModal() {
   const dispatch = useAppDispatch();
   const stripe = useStripe();
   const elements = useElements();

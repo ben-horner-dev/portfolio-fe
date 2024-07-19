@@ -1,0 +1,21 @@
+.conversation-box-inner {
+    max-height: 50vh !important;
+    min-height: 50vh !important;
+    height: 100% !important;
+    width: 100% !important;
+    border: 1px solid grey !important;
+    border-radius: 8px !important;
+}
+
+.conversation-grid-inner::-webkit-scrollbar,
+.messages-list::-webkit-scrollbar {
+    display: none;
+}
+
+.conversation-grid-inner {
+    overflow-x: hidden !important;
+    height: 100% !important;
+    overflow-y: auto !important;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: 1px; /* Firefox */
+}

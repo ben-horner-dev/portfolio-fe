@@ -1,0 +1,28 @@
+.user-container {
+    overflow-x: hidden;
+    height: 70vh;
+}
+
+.title-container {
+    position: fixed;
+    z-index: 10;
+    background-color: white;
+    width: 70vw;
+    padding-left: 4rem;
+    padding-top: 1rem;
+}
+
+.user-result-box {
+    width: 70vw;
+    padding: 4rem;
+    overflow-x: hidden;
+}
+
+.search-bar {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.user-result-username {
+    display: inline !important;
+}

@@ -1,10 +1,16 @@
 import { useAppDispatch, useAppSelector } from "@/hooks";
 import { closeAlert } from "@/slices/alertSlice";
 import Alert from "@mui/material/Alert";
+import Slide, { SlideProps } from "@mui/material/Slide";
 import Snackbar from "@mui/material/Snackbar";
+
 import React from "react";
+
 import styles from "./FlashMessage.module.css";
 
+function SlideTransition(props: SlideProps) {
+  return <Slide {...props} direction="up" />;
+}
 export function FlashMessage() {
   const dispatch = useAppDispatch();
   const open = useAppSelector((state) => state.alert.open);
@@ -22,10 +28,11 @@ export function FlashMessage() {
   return (
     <div>
       <Snackbar
+        TransitionComponent={SlideTransition}
         open={open}
         autoHideDuration={6000}
         onClose={handleClose}
-        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
       >
         <Alert
           onClose={handleClose}

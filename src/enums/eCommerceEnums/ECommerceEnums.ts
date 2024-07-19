@@ -151,4 +151,16 @@ export const DEFAULT_MAX_QTY = 9;
 export enum ImageTrackDirection {
   LEFT,
   RIGHT,
+  ARROW_LEFT = "ArrowLeft",
+  ARROW_RIGHT = "ArrowRight",
+}
+
+export enum HoverClass {
+  HOVER = "hover",
+  NO_HOVER = "no-hover",
+}
+
+export enum Prefix {
+  SOCIALS = "socials",
+  PRODUCT = "product",
 }
