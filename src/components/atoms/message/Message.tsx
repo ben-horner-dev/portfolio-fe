@@ -25,10 +25,7 @@ interface MessageProps {
 export function Message({ message, setActiveMessages, setFade }: MessageProps) {
   const handleChangeActiveMsg = () => {
     setFade(false);
-    setTimeout(
-      () => setActiveMessages({ [message.name]: message.message }),
-      500,
-    );
+    setActiveMessages({ [message.name]: message.message });
   };
 
   return (

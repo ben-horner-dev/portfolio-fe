@@ -12,6 +12,7 @@ export const ChatMessage = ({ msg }: ChatMessagesProps) => {
         variant="body1"
         gutterBottom
         component="div"
+        data-testid="chat-message"
         className={styles["individual-message-text"]}
         sx={{
           color: msg.sender === "me" ? "white" : "black",

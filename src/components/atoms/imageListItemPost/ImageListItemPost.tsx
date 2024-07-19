@@ -23,6 +23,7 @@ export const ImageListItemPost = ({
     >
       <Stack direction="row" spacing={2}>
         <IconButton
+          data-testid="show-friends-btn"
           onClick={() => {
             dispatch(setShowFriends(true));
             dispatch(setUser(`profile_${keyVal + 1}`));
