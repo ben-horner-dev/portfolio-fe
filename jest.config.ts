@@ -24,6 +24,20 @@ const config: Config = {
         "<rootDir>/components/molecules/logoBtn/LogoBtn.tsx", // No logic to test
         "<rootDir>/components/organisms/Payment/Payment.tsx", // TODO: Temp skip before full feature implementation
         "<rootDir>/contexts/refProvider.tsx", // No logic to test
+        "<rootDir>/components/atoms/userListText", // No logic to test
+        "<rootDir>/components/atoms/userPostsBtn", // No logic to test
+        "<rootDir>/components/atoms/userPostsTitle", // No logic to test
+        "<rootDir>/components/molecules/UserLIstItem", // No logic to test
+        "<rootDir>/components/molecules/messageTitle", // No logic to test
+        "<rootDir>/components/molecules/searchResult", // No logic to test
+        "<rootDir>/components/molecules/socialBtns", // No logic to test
+        "<rootDir>/components/molecules/userSearchTextField", // No logic to test
+        "<rootDir>/components/molecules/userTitle", // No logic to test
+        "<rootDir>/components/organisms/messages", // No logic to test
+        "<rootDir>/components/organisms/userSearchResult", // No logic to test
+        "<rootDir>/components/templates/messagesModal", // No logic to test
+        "<rootDir>/components/templates/usersModal", // No logic to test
+        "<rootDir>/components/molecules/conversation", // No logic to test
     ],
     moduleNameMapper: {
         // ...
