@@ -34,7 +34,7 @@ export function SectionContainer() {
 
   const [textClass, setTextClass] = useState("");
   const [contentClass, setContentClass] = useState("");
-  const [content, setContent] = useState(null);
+  const [content, setContent] = useState<React.ReactNode>(null);
   const [prevRef, setPrevRef] = useState<HTMLElement | null | undefined>(null);
 
   const fadeIn = () => {

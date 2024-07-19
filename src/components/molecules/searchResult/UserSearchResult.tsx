@@ -3,11 +3,16 @@ import Avatar from "@mui/material/Avatar";
 import { Box } from "@mui/system";
 import { HTMLAttributes } from "react";
 
+interface ExtendedHTMLAttributes extends HTMLAttributes<HTMLLIElement> {
+  key?: string;
+}
+
 interface UserSearchResultProps {
-  props: HTMLAttributes<HTMLLIElement>;
+  props: ExtendedHTMLAttributes;
   user: string;
 }
 export const UserSearchResult = ({ props, user }: UserSearchResultProps) => {
+  //
   const { key, ...restProps } = props;
   return (
     <Box
