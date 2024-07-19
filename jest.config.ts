@@ -39,6 +39,9 @@ const config: Config = {
         "<rootDir>/components/templates/usersModal", // No logic to test
         "<rootDir>/components/molecules/conversation", // No logic to test
         "<rootDir>/components/molecules/chatMessage", // No logic to test
+        "<rootDir>/components/templates/footer", // No logic to test
+        "<rootDir>/components/atoms/LinkedInIcon", // No logic to test
+        "<rootDir>/components/atoms/githubIcon", // No logic to test
     ],
     moduleNameMapper: {
         // ...
