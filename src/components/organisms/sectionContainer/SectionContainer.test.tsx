@@ -7,12 +7,11 @@ jest.mock("next-auth/react", () => ({
 
 describe("SectionContainer", () => {
   it("renders without crashing and displays correct text", () => {
-    const { getAllByText } = renderWithProviders(<SectionContainer />);
+    const { getAllByTestId } = renderWithProviders(<SectionContainer />);
 
-    const textElement = getAllByText("OAUTH FLOW");
-    expect(textElement).toHaveLength(2);
-    for (const element of textElement) {
-      expect(element).toBeInTheDocument();
-    }
+    const textElement = getAllByTestId("faded-text");
+    expect(textElement).toHaveLength(1);
+    const foreGroundText = getAllByTestId("un-faded-text");
+    expect(foreGroundText).toHaveLength(1);
   });
 });

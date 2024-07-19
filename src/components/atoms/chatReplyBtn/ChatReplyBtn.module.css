@@ -1,0 +1,9 @@
+.btn {
+    color: black !important;
+}
+
+@media (max-width: 910px) {
+    .reply-btn {
+        display: none !important;
+    }
+}
