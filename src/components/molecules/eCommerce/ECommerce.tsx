@@ -1,8 +1,8 @@
 import { ImageListItemImage } from "@/components/atoms/imageListItemImage";
 import { ImageTrack } from "@/components/molecules/imageTrack";
 import { Checkout } from "@/components/organisms/checkout";
-import { Payment } from "@/components/organisms/payment";
 import { MessagesModal } from "@/components/templates/messagesModal";
+import { PaymentModal } from "@/components/templates/paymentModal";
 import { UsersModal } from "@/components/templates/usersModal";
 import { HoverClass, Prefix } from "@/enums/eCommerceEnums";
 import { useAppSelector } from "@/hooks";
@@ -84,7 +84,7 @@ export function ECommerce({ InfoElement, prefix }: ECommerceProps) {
       <Checkout />
       {/* {clientSecret && stripePromise && ( */}
       <Elements stripe={stripePromise} options={{ clientSecret }}>
-        <Payment />
+        <PaymentModal />
       </Elements>
       {/* )} */}
       <UsersModal />
