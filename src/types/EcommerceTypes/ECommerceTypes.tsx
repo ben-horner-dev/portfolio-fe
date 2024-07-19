@@ -5,3 +5,9 @@ export type ShoppingCart = {
     qty: number;
   };
 };
+
+export interface ImageListItemImageInfoProps {
+  keyVal: number;
+  checked: boolean;
+  handleProductHover: (key: number, bool: boolean) => () => void;
+}
