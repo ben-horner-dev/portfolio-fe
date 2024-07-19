@@ -3,6 +3,7 @@ import { UserAvatar } from "@/components/atoms/userAvatar";
 import { BtnGroup } from "@/components/molecules/btnGroup";
 import { Burger } from "@/components/molecules/burger";
 import { LogoBtn } from "@/components/molecules/logoBtn/LogoBtn";
+import { SocialBtns } from "@/components/molecules/socialBtns";
 import { NavBarIconsEnums } from "@/enums/navBarIconEnums";
 import { useAppSelector } from "@/hooks";
 import { Toolbar } from "@mui/material";
@@ -13,6 +14,7 @@ export const CustomToolbar = () => {
   const btnGroupMap = {
     [NavBarIconsEnums.USER]: <UserAvatar />,
     [NavBarIconsEnums.SHOPPING_CART]: <ShoppingCart />,
+    [NavBarIconsEnums.SOCIAL]: <SocialBtns />,
   };
 
   return (
