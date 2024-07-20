@@ -1,4 +1,5 @@
 import { useRefs } from "@/contexts/refProvider";
+import { BTN_ITEMS } from "@/enums/navBarIconEnums";
 import { Button, ButtonGroup } from "@mui/material";
 import { ReactNode } from "react";
 import styles from "./BtnGroup.module.css";
@@ -7,7 +8,6 @@ export function BtnGroup({ children }: { children: ReactNode }) {
   const refs = useRefs();
   const isHeroVisible = refs?.hero.isVisible;
   const btnColor = isHeroVisible ? "primary" : "secondary";
-  const btnItems = ["OAuth", "ECommerce", "Network", "Contact"];
 
   const handleClick = (key: string) => {
     if (!refs) return;
@@ -21,7 +21,7 @@ export function BtnGroup({ children }: { children: ReactNode }) {
   return (
     <ButtonGroup className={styles["menu-btns"]} data-testid="menu-btns">
       {children}
-      {btnItems.map((item, idx) => {
+      {BTN_ITEMS.map((item, idx) => {
         return (
           <Button
             onClick={() => handleClick(item)}

@@ -2,6 +2,7 @@ import { FlashMessage } from "@/components/atoms/flashMessage";
 import { SectionContainer } from "@/components/organisms/sectionContainer";
 import { Footer } from "@/components/templates/footer";
 import { Hero } from "@/components/templates/hero";
+import { NavDrawer } from "@/components/templates/navDrawer";
 import { SnapSectionContainer } from "@/components/templates/snapSectionContainer";
 import "animate.css";
 import Head from "next/head";
@@ -18,6 +19,7 @@ export default function Index() {
       </SnapSectionContainer>
       <Footer />
       <FlashMessage />
+      <NavDrawer />
     </>
   );
 }
