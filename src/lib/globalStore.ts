@@ -1,5 +1,6 @@
 import { alertReducer } from "@/slices/alertSlice";
 import { navBarIconsReducer } from "@/slices/navBarIconsSlice";
+import { navSlice } from "@/slices/navSlice";
 import { sectionReducer } from "@/slices/sectionSlice";
 import { shoppingCartReducer } from "@/slices/shoppingCartSlice";
 import { socialNetworkSlice } from "@/slices/socialNetworkSlice";
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
   shoppingCart: shoppingCartReducer,
   navBarIcons: navBarIconsReducer,
   socialNetwork: socialNetworkSlice.reducer,
+  nav: navSlice.reducer,
 });
 
 export const setupStore = (preloadedState?: Partial<RootState>) => {

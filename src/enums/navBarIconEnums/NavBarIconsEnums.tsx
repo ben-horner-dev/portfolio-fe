@@ -3,3 +3,5 @@ export enum NavBarIconsEnums {
   SHOPPING_CART,
   SOCIAL,
 }
+
+export const BTN_ITEMS = ["OAuth", "ECommerce", "Network", "Contact"];
