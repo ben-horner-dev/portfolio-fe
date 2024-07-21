@@ -26,7 +26,7 @@ context("Actions", () => {
             win.scrollBy(0, 100);
         });
         cy.contains("NETWORK").should("have.length", 1);
-        cy.get('[data-testid="MailOutlineOutlinedIcon"]').click();
+        cy.get('[data-testid="MailOutlineOutlinedIcon"]').last().click();
         cy.get(".MuiListItem-root").should("have.length", 7).first().click();
         cy.get("textarea").first().type("This is a test message");
         cy.contains("Send").click();

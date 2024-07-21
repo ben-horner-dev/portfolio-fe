@@ -26,7 +26,7 @@ context("Actions", () => {
             win.scrollBy(0, 100);
         });
         cy.contains("NETWORK").should("have.length", 1);
-        cy.get('[data-testid="PeopleAltOutlinedIcon"]').click();
+        cy.get('[data-testid="PeopleAltOutlinedIcon"]').last().click();
         cy.get("input").first().type("profile_1").type("{enter}");
     });
 });
