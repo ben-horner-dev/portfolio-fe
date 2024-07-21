@@ -36,7 +36,7 @@ jobs:
                   echo "AUTH_GOOGLE_SECRET=${{ secrets.AUTH_GOOGLE_SECRET }}" >> .env
                   echo "AUTH_SECRET=${{ secrets.AUTH_SECRET }}" >> .env
                   echo "AUTH_URL=${{ secrets.NEXTAUTH_URL }}" >> .env
-                  echo "NEXTAUTH_URL">${{ secrets.NEXTAUTH_URL }}" >> .env
+                  echo "NEXTAUTH_URL=${{ secrets.NEXTAUTH_URL }}" >> .env
                   echo "NEXTAUTH_URL_INTERNAL=${{ secrets.NEXTAUTH_URL_INTERNAL }}" >> .env
             - name: Build the Docker image
               run: docker compose -f tools/docker/docker-compose.ci-build.yml build
