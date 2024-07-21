@@ -38,6 +38,7 @@ jobs:
                   echo "AUTH_URL=${{ secrets.NEXTAUTH_URL }}" >> .env
                   echo "NEXTAUTH_URL=${{ secrets.NEXTAUTH_URL }}" >> .env
                   echo "NEXTAUTH_URL_INTERNAL=${{ secrets.NEXTAUTH_URL_INTERNAL }}" >> .env
+                  echo "AUTH_REDIRECT_PROXY_URL=${{ secrets.AUTH_REDIRECT_PROXY_URL }}" >> .env
             - name: Build the Docker image
               run: docker compose -f tools/docker/docker-compose.ci-build.yml build
             - name: Tag and push Docker image
