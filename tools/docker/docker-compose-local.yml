@@ -17,7 +17,7 @@ services:
             context: ../../
             dockerfile: ./tools/docker/dockerfile.next
         image: portfolio-fe-local
-        env:
+        environment:
             - AUTH_TRUST_HOST=true
         ports:
             - "3000:3000"

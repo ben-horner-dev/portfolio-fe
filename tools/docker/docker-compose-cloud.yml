@@ -10,7 +10,7 @@ services:
             - /etc/letsencrypt/:/etc/letsencrypt/:ro
     portfolio-frontend:
         image: registry.digitalocean.com/${DOCKER_REGISTRY}/portfolio-frontend:latest
-        env:
+        environment:
             - AUTH_TRUST_HOST=true
         ports:
             - "3000:3000"
