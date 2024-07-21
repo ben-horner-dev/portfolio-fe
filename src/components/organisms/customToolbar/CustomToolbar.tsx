@@ -6,7 +6,7 @@ import { LogoBtn } from "@/components/molecules/logoBtn/LogoBtn";
 import { SocialBtns } from "@/components/molecules/socialBtns";
 import { NavBarIconsEnums } from "@/enums/navBarIconEnums";
 import { useAppSelector } from "@/hooks";
-import { Toolbar } from "@mui/material";
+import { Stack, Toolbar } from "@mui/material";
 import Box from "@mui/material/Box";
 
 export const CustomToolbar = () => {
@@ -25,7 +25,10 @@ export const CustomToolbar = () => {
       <Burger />
       <Box className="flex-grow" />
       <Box className="md:hidden block">
-        <LogoBtn />
+        <Stack direction={"row"}>
+          {icon !== null && btnGroupMap[icon]}
+          <LogoBtn />
+        </Stack>
       </Box>
       <Box className="md:block hidden">
         <BtnGroup>{icon !== null && btnGroupMap[icon]}</BtnGroup>
